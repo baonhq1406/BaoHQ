@@ -1,0 +1,45 @@
+:root {
+  color-scheme: light;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: #202037;
+  background: #f7f7fb;
+  font-synthesis: none;
+  --text-muted: #575568;
+  --line: #dedceb;
+  --accent: #4c2cad;
+}
+* { box-sizing: border-box; }
+body { margin: 0; line-height: 1.62; }
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: .16em; }
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.skip { position: absolute; top: .5rem; left: .5rem; z-index: 1; padding: .5rem .75rem; background: #fff; }
+.skip:not(:focus) { clip-path: inset(50%); }
+.site-header, main, .site-footer { width: min(48rem, calc(100% - 2rem)); margin-inline: auto; }
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  column-gap: 2rem;
+  row-gap: .35rem;
+  padding-block: .8rem;
+  border-bottom: 1px solid var(--line);
+}
+.wordmark { color: #202037; font-size: 1.125rem; font-weight: 760; text-decoration: none; }
+.site-header nav { display: flex; flex-wrap: wrap; gap: .3rem 1.15rem; }
+.site-header a { display: inline-flex; align-items: center; min-height: 2.75rem; }
+.site-header nav a[aria-current] { font-weight: 700; }
+main { padding-block: clamp(1.75rem, 5vw, 3.75rem); }
+h1, h2, p { margin-block-start: 0; }
+h1 { margin-block-end: .5rem; font-size: clamp(2.05rem, 6vw, 3rem); line-height: 1.13; letter-spacing: -.035em; }
+h2 { margin-block: 1.9rem .4rem; font-size: 1.22rem; line-height: 1.4; }
+p, main ul { margin-block-end: .9rem; }
+li + li { margin-top: .6rem; }
+.updated, .site-footer { color: var(--text-muted); font-size: .92rem; }
+.intro { max-width: 59ch; }
+code { color: #372175; background: #eee9ff; border-radius: .25rem; padding: .12em .3em; font-size: .9em; overflow-wrap: anywhere; }
+.policy-list { list-style: none; padding: 0; margin-block-start: 1.7rem; display: grid; gap: .75rem; }
+.policy-list li { margin: 0; background: #fff; border: 1px solid var(--line); border-radius: .75rem; padding: .95rem 1rem; }
+.policy-list h2 { margin: 0 0 .25rem; }
+.policy-list p { margin: 0; color: var(--text-muted); }
+.site-footer { padding-block: 1.15rem 1.75rem; border-top: 1px solid var(--line); }
